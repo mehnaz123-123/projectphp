@@ -1,10 +1,7 @@
 <?php
-include('include/header.php')
-?>
-<?php
-include ('include/db.php')
-?>
+include('includes/header.php')
 
+?>
 
 
 
@@ -521,6 +518,6 @@ include ('include/db.php')
 
 
 <?php
-include('include/footer.php')
+include('includes/footer.php')
 
 ?>
