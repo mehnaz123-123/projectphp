@@ -63,7 +63,7 @@ include('includes/db.php');
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 $useremail = $_POST['email'];
   $userpassword = $_POST['password'];
-$role=$_POST['role'];
+
 
 
 $sql = $conn->query("SELECT * FROM auth where email = '$useremail'");
@@ -72,19 +72,19 @@ $sql = $conn->query("SELECT * FROM auth where email = '$useremail'");
 
 
 if($sql && $sql->num_rows == 1){
-  $userrow =   $sql->fetch_assoc();
+  $row =   $sql->fetch_assoc();
 
 
-if(password_verify($password,$userrow[$password])){
-     $_SESSION['email'] = $useremail;
-  $_SESSION['role'] = $userrole;
+if($userpassword == $row['password']){
+     $_SESSION['email'] = $row['email'];
+  $_SESSION['role'] = $row['role'];
 
 
 
 
   /// redirect based on roles //
 
-  if($userrole == 'admin')
+  if($row['role'] == 'admin')
 {
   header("location: admin/dashboard.php");
 }
