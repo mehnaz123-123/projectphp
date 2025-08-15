@@ -108,7 +108,7 @@ if($conn->query($sql)){
 
 ///redirect //
 if($role == 'admin'){
-  header("location: admin/dashborad.php");
+  header("location: admin/dashboard.php");
 }
 else{
     header("location: home.php");
