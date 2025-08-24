@@ -116,11 +116,7 @@ $sql= "SELECT * FROM products";
 $result= $conn->query($sql);
 while($row = $result->fetch_assoc()){
 ?>
-
-
-
-
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix <?php echo $row['category'];  ?>">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix <?php echo $row['category'];  ?>">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="<?php echo $row['image'];  ?>">
                             <ul class="product__hover">

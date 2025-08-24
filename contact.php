@@ -1,5 +1,5 @@
 <?php
-include('include/header.php')
+include('includes/header.php')
 
 ?>
 
@@ -63,6 +63,6 @@ include('include/header.php')
 
 
 <?php
-include('include/footer.php')
+include('includes/footer.php')
 
 ?>
