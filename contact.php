@@ -3,7 +3,24 @@ include('includes/header.php')
 
 ?>
 
+<?php
+include('includes/db.php');
+if($_SERVER["REQUEST_METHOD"] =="POST"){
+$uname= $_POST['user_name'];
+$uemail = $_POST['user_email'];
+$umessage= $_POST['user_message'];
 
+$users= "INSERT INTO contacts (user_name,user_email,user_message)VALUES ('$uname','$uemail','$umessage')";
+if($conn->query($users) === true){
+echo "data saved successfully";
+}
+else{
+    echo "ERROR" .$users. "<br>". $conn->error;
+}
+}
+$conn->close();
+
+?>
 
  <!-- Map Begin -->
     <div class="map">
@@ -37,16 +54,16 @@ include('includes/header.php')
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__form">
-                        <form action="#">
+                        <form action="contact.php" method="post">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" placeholder="Name" name="user_name">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
+                                    <input type="text" placeholder="Email" name="user_email">
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea placeholder="Message"></textarea>
+                                    <textarea placeholder="Message" name="user_message"></textarea>
                                     <button type="submit" class="site-btn">Send Message</button>
                                 </div>
                             </div>
