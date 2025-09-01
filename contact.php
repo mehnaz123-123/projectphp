@@ -12,7 +12,7 @@ $umessage= $_POST['user_message'];
 
 $users= "INSERT INTO contacts (user_name,user_email,user_message)VALUES ('$uname','$uemail','$umessage')";
 if($conn->query($users) === true){
-echo "data saved successfully";
+echo "<script>alert('data saved successfully');</script>";
 }
 else{
     echo "ERROR" .$users. "<br>". $conn->error;

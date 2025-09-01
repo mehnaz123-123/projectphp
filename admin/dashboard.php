@@ -20,9 +20,9 @@
 <body>
 
 <?php
-include ('includes1/navbar.php');
+include ('navbar.php');
 
-include ('includes1/sidebar.php');
+
 ?>
  <div class="main-wrapper main-wrapper-1">
  <div class="main-content">
@@ -32,7 +32,7 @@ include ('includes1/sidebar.php');
 </div>
 </div>
 <?php
-include ('includes1/footer.php');
+include ('footer.php');
 ?>
   <!-- General JS Scripts -->
   <script src="assets/js/app.min.js"></script>
