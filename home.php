@@ -137,7 +137,7 @@ while($row = $result->fetch_assoc()){
                         </div>
                         <div class="product__item__text">
                             <h6><?php echo $row['name'];  ?></h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <a href="addcart.php?id=<?php echo $row['id'];?>" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
